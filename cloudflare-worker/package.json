@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-worker",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "@cloudflare/workers-types": "^3.11.0",
+    "@types/service-worker-mock": "^2.0.1",
+    "cross-env": "5.0.5"
+  }
+}

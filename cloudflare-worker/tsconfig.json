@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "../dist/cloudflare-worker",
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "alwaysStrict": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "types": [
+      "@cloudflare/workers-types",
+      "@types/service-worker-mock",
+      "webworker"
+    ]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
+}

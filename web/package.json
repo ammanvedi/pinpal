@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "scripts": {
+    "tf:pull-vars": "node scripts/pull-tf-vars.js",
+    "dev": "ENV=dev yarn tf:pull-vars && vite",
+    "build": "ENV=prod yarn tf:pull-vars && tsc && vite build",
+    "preview": "yarn tf:pull-vars && vite preview"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^1.10.1",
+    "cross-env": "5.0.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
+}

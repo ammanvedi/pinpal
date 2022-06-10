@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "tf:init": "cd terraform/environment/${ENV} && terraform init",
+    "tf:init:dev": "ENV=dev yarn tf:init",
+    "tf:init:prod": "ENV=prod yarn tf:init",
+    "tf:output": "cd terraform/environment/${ENV} && terraform output -json > .out.json",
+    "tf:output:dev": "ENV=dev yarn tf:output",
+    "tf:output:prod": "ENV=prod yarn tf:output",
+    "tf:plan": "cd terraform/environment/${ENV} && terraform plan",
+    "tf:plan:dev": "ENV=dev yarn tf:plan",
+    "tf:plan:prod": "ENV=prod yarn tf:plan",
+    "tf:apply": "cd terraform/environment/${ENV} && terraform apply",
+    "tf:apply:dev": "ENV=dev yarn tf:apply",
+    "tf:apply:prod": "ENV=prod yarn tf:apply"
+  },
+  "private": true,
+  "workspaces": [
+    "terraform",
+    "web",
+    "cloudflare-worker"
+  ],
+  "dependencies": {
+    "dotenv-cli": "^5.1.0"
+  }
+}

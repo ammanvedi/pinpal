@@ -1,0 +1,14 @@
+.env
+.env.sh
+.DS_Store
+.idea/
+.auto.tfvars
+node_modules
+web/.cache
+web/dist
+web/.tmp
+.out.json
+yarn-error.log
+.terraform
+dist/
+.auto.tfvars.json
