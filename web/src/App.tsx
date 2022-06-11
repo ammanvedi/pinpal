@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import {useAuth0} from "@auth0/auth0-react";
+import {Map} from "./Map";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <p>{user.email}</p>
           </div>
       )}
+        <Map />
       <button onClick={() => logout({ returnTo: window.location.origin })}>
         Log Out
       </button>
