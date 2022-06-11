@@ -2,12 +2,18 @@
   "name": "cloudflare-worker",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "webpack"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.2.0",
     "@cloudflare/workers-types": "^3.11.0",
     "@types/service-worker-mock": "^2.0.1",
-    "cross-env": "5.0.5"
+    "cross-env": "5.0.5",
+    "ts-loader": "^9.3.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

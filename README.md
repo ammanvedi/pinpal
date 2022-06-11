@@ -20,5 +20,7 @@ you need to terraform login and have
 
 cloudflare
 
-1. set up cloudflare accoutn 
-2. https://blog.cloudflare.com/deploy-workers-using-terraform/
+1. set up cloudflare accoutn
+3. add a site with your custom domain
+4. copy accountid and zone id from your site
+5. add custom domain to worker manually, {domain}/* for serve_app and api.{domain}/* for serve_api

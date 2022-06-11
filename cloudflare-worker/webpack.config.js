@@ -1,10 +1,13 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: {
+    'serve-app': './src/serve-app.ts',
+    'serve-api': './src/serve-api.ts',
+  },
   output: {
-    filename: 'worker.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist/cloudflare-worker/'),
+    filename: '[name].bundle.js',
   },
   devtool: 'cheap-module-source-map',
   mode: 'development',

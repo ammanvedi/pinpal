@@ -26,15 +26,17 @@ module "auth0" {
   source = "../../modules/auth0"
   web_client_name = "web-prod"
 
-  auth0_callback_urls = ["https://pinpal.io"]
-  auth0_allowed_origins = ["https://pinpal.io"]
-  auth0_logout_urls = ["https://pinpal.io"]
+  auth0_callback_urls = ["https://${var.app_domain}"]
+  auth0_allowed_origins = ["https://${var.app_domain}"]
+  auth0_logout_urls = ["https://${var.app_domain}"]
   auth0_google_client_id = var.auth0_google_client_id
   auth0_google_client_secret = var.auth0_google_client_secret
 }
 
 module "cloudflare" {
   source = "../../modules/cloudflare"
-
-
+  cloudflare_api_key = var.cloudflare_api_key
+  cloudflare_email = var.cloudflare_email
+  cloudflare_worker_domain = var.app_domain
+  cloudflare_account_id = var.cloudflare_account_id
 }

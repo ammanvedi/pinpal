@@ -5,6 +5,7 @@ addEventListener("fetch", event => {
 });
 
 async function handleEvent(event: FetchEvent) {
+    console.log('serve_api')
     try {
         return await getAssetFromKV(event);
     } catch (e) {
